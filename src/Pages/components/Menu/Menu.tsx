@@ -12,7 +12,7 @@ export const Menu: React.FC = () => {
     if (query !== "") {
       try {
         const res = await axios.get(
-          `http://localhost:3000/search_menu/${query}`
+          `${process.env.REACT_APP_BASE_URL}/search_menu/${query}`
         );
         setResults(res.data);
       } catch (err) {
