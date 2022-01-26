@@ -21,6 +21,10 @@ export const Menu: React.FC = () => {
     }
   }
 
+  function onChange(value: string) {
+    window.open(`https://you.com/search?q=${value}`, "_blank");
+  }
+
   return (
     <ContainerLogo>
       <Logo src={logo_app} alt="" />
@@ -28,8 +32,8 @@ export const Menu: React.FC = () => {
         style={{ width: "100%" }}
         showSearch
         placeholder="Search a term"
-        optionFilterProp="children"
         onSearch={onSearch}
+        onChange={onChange}
       >
         {result?.map((item: any, index: number) => (
           <Option value={item} key={index}>
