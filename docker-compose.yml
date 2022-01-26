@@ -1,0 +1,18 @@
+version: '3.3'
+services:
+  app:
+    container_name: react_you
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - '.:/app'
+      - '/app/node_modules'
+    ports:
+      - '3001:3001'
+    expose:
+      - 3001
+    environment:
+      - NODE_ENV=development
+      - REACT_APP_BASE_URL=http://154.53.43.234:3000
+    stdin_open: true
