@@ -27,7 +27,7 @@ export const Menu: React.FC = () => {
       <Select
         style={{ width: "100%" }}
         showSearch
-        placeholder="Select a person"
+        placeholder="Search a term"
         optionFilterProp="children"
         onSearch={onSearch}
       >
