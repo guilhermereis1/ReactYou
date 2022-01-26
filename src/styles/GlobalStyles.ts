@@ -10,7 +10,8 @@ export default createGlobalStyle`
   }
   html, body, #root{
     height: 100%;
-    background-color: #f7f7f7;
+    background-color: #202024;
+    color: #fff
   }
   a {
     all: unset;
