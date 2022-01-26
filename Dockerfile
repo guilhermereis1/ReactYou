@@ -2,6 +2,8 @@ FROM node
 
 WORKDIR /app
 
+RUN mkdir -p /app/node_modules
+
 RUN chown -R node:node /app/node_modules
 
 COPY package.json .
