@@ -2,6 +2,8 @@ FROM node
 
 WORKDIR /app
 
+RUN chown -R node:node /app/node_modules
+
 COPY package.json .
 
 RUN npm install react-scripts@3.4.3 -g
